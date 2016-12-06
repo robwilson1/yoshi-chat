@@ -1,0 +1,26 @@
+{
+    "file": {
+        "level": "verbose",
+        "silent": false,
+        "colorize": false,
+        "timestemp": true,
+        "filename": "./logs/winston.log",
+        "json": true,
+        "prettyPrint": true,
+        "showLevel": true,
+        "tailable": true,
+        "exitOnError": false
+    },
+    "console": {
+        "level": "verbose",
+        "silent": false,
+        "colorize": true,
+        "timestamp": false,
+        "json": false,
+        "stringify": false,
+        "prettyPrint": false,
+        "humanReadableUnhandledException": true,
+        "showLevel": true,
+        "exitOnError": false
+    }
+}
