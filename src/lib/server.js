@@ -2,6 +2,7 @@
 
 import fs from 'fs'
 import path from 'path'
+import express from 'express'
 import methodOverride from 'method-override'
 import bodyParser from 'body-parser'
 import helmet from 'helmet'
@@ -18,9 +19,6 @@ export default function serverSetup(server) {
 
     let promise = new Promise((resolve, reject) => {
         try {
-            server.set('views', path.resolve(__dirname + '/../views'))
-            server.set('view engine', 'ejs')
-
             server.use(methodOverride((req, res) => {
                 if (req.body && typeof req.body === 'object' && '_method' in req.body) {
                     let method = req.body._method
@@ -34,7 +32,9 @@ export default function serverSetup(server) {
                 extended: true
             }))
 
-            server.use(helmet())
+            server.use(helmet({
+                noSniff: true
+            }))
 
             server.use(cors())
 
@@ -43,6 +43,8 @@ export default function serverSetup(server) {
                 saveUninitialized: true,
                 resave: false
             }))
+
+            server.use(express.static(path.join(__dirname, '../../client')))
 
             global.yotiClient = new YotiClient(SDK_ID, PEM)
 
