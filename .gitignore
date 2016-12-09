@@ -25,6 +25,3 @@ benchmarks/graphs
 
 # VSCode
 .vscode
-
-# Build directory
-dist
