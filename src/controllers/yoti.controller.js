@@ -2,6 +2,10 @@
 
 import config from '../config'
 
+export function getAppId(req, res) {
+    res.status(200).json({ appId: config.appId })
+}
+
 export function getProfile(req, res) {
     let token = req.query.token
 

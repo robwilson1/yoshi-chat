@@ -19,7 +19,7 @@ As this project is written in ES6, it is advised to use an ES6 complient version
 2. Download your PEM file via the `Keys` tab.
 3. Open the PEM file in an IDE and copy/paste the key in `/src/lib/keys/yoti-login.pem`
 4. Click the `Integration` tab in Dashboard to set the callback URL.
-5. Click the slider to make the app live, refresh and gran the `appId` and `sdkId`
+5. Click the slider to make the app live, refresh and grab the `appId` and `sdkId`
 5. Copy and paste these values into the appropriate keys in `src/config/index.json`
 6. Done!
 

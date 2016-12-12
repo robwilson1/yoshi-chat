@@ -1,6 +1,6 @@
 {
     "port": 3000,
     "sessionSecret": "mycoolsessionsecret",
-    "sdkId": "<add-id-here>",
-    "appId": "<add-id-here>"
+    "sdkId": "e0d0d10b-3cca-4db9-ae27-5bd2e811f413",
+    "appId": "5ac768f1-06a7-4fa6-8406-26313a4bda37"
 }
