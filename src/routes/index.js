@@ -11,7 +11,7 @@ export default function router(server) {
     server.get('/api/profile', getProfile)
 
     // Unrecognised routes to index (support for react routes)
-    server.get('/', (req, res) => {
+    server.get('/*', (req, res) => {
         res.sendFile(path.join(__dirname, '../../client', 'index.html'))
     })
 }
