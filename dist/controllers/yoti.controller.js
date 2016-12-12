@@ -3,6 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+exports.getAppId = getAppId;
 exports.getProfile = getProfile;
 
 var _config = require('../config');
@@ -10,6 +11,10 @@ var _config = require('../config');
 var _config2 = _interopRequireDefault(_config);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function getAppId(req, res) {
+    res.status(200).json({ appId: _config2.default.appId });
+}
 
 function getProfile(req, res) {
     var token = req.query.token;

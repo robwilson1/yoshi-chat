@@ -20,6 +20,7 @@ function router(server) {
     server.get('/api/healthcheck', _utils.healthCheck);
 
     server.get('/api/profile', _yoti.getProfile);
+    server.get('/api/appId', _yoti.getAppId);
 
     // Unrecognised routes to index (support for react routes)
     server.get('/*', function (req, res) {
