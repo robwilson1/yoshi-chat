@@ -22,7 +22,7 @@ function router(server) {
     server.get('/api/profile', _yoti.getProfile);
 
     // Unrecognised routes to index (support for react routes)
-    server.get('/', function (req, res) {
+    server.get('/*', function (req, res) {
         res.sendFile(_path2.default.join(__dirname, '../../client', 'index.html'));
     });
 }
