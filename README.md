@@ -1,32 +1,32 @@
-# Yoti Node Starter
+#Yoshi Chat
 
-Starter app for Yoti integration using Express.js and ES6.
+## Built with:
 
-## Installation
+* Node / Express
+* React
+* Redux
+* Immutable
+* PubNub
+* Yoti
 
-1. Form the repository.
-2. Clone the repository.
-3. `cd` into the new directory and `rm` the `.git` directory.
-4. Run `git init` to set up fresh git tracking.
+## Wins:
 
-## Node version
+* Real-time comunication across multiple channels
+* Full Yoti integration
+* Able to restrict rooms based on Yoti profile
+* 1st time using React/Redux/Immutable
 
-As this project is written in ES6, it is advised to use an ES6 complient version of node such as 6.8.0 or greater, however, by default the app transpiles to ES5 when run with `npm start`.
+## Challenges to overcome
 
-## How to integrate with your Yoti app
+* Unable to send selfie to PubNub for chat history. URL becomes too long trying to send the base64.
+* Give better feedback when a user does not pass a room restriction. (Right now it is a console message).
+* Remove the small areas of react state, switch to redux there.
+* Somehow call the API in the controller (middleware?) instead of axiom. (Axiom is nice though).
+* Make it look nicer
 
-1. Create your app via the [Yoti Dashboard](https://www.yoti.com/dashboard)
-2. Download your PEM file via the `Keys` tab.
-3. Open the PEM file in an IDE and copy/paste the key in `/src/lib/keys/yoti-login.pem`
-4. Click the `Integration` tab in Dashboard to set the callback URL.
-5. Click the slider to make the app live, refresh and grab the `appId` and `sdkId`
-5. Copy and paste these values into the appropriate keys in `src/config/index.json`
-6. Done!
+## Bugs
 
-## Tests
-
-Basic testing is provided with Mocha and Chai. Feel free to change this to your needs.
-You can run tests with: `npm test`.
+* View not updating when changing room (but new messages ingress/egress WILL be published there!)
 
 ## Running the app
 
